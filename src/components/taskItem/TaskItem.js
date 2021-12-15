@@ -6,6 +6,7 @@ const TaskItem = ({todo,handleComplete,handleDelete}) => {
           return (
                     <div className="task">
                              <p className={todo.isDone ? "todo" : null}>{todo.task}</p>
+                             {/* <p style={{textDecoration:todo.isDone ? "line-through" : null}}>{todo.task}</p> */}
                              <button onClick={()=>handleComplete(todo.id)}>{todo.isDone ? "Undo" : "Complete" }</button>
                              <button onClick={() =>handleDelete(todo.id)}>Delete</button>
                     </div>
